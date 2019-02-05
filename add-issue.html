@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Issue Tracker</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body onload="resetWarnings()">
+    <header>
+      <h2>JS Issue Tracker</h2>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="issues.html">Issues</a></li>
+        <li><a class="active" href="add-issue.html">Add Issue</a></li>
+      </ul>
+    </nav>
+    <section class="page-body">
+      <h1 class="page-title">Add Issue</h1>
+      <form class="add-issue-form" id="addIssueForm" onsubmit="submitIssueForm(event);">
+        <label for="issue_name_input">Name:</label>
+        <input
+          class="form-input"
+          type="text"
+          name="issue_name"
+          id="issue_name_input"
+          placeholder="Enter Name"/>
+        <label for="issue_name" class="warning" id="name-warning">*Name is required</label>
+        <label for="issue_description">Description:</label>
+        <input
+        class="form-input"
+        type="text"
+        name="issue_description"
+        id="issue_description_input"
+        placeholder="Enter Description"/>
+        <label for="issue_description" class="warning" id="description-warning">*Description is required</label>
+        <button class="form-button" type="submit">
+          <div id="btn-text">Add Issue</div>
+          <div class="loader"></div>
+          </button>
+      </form>
+    </section>
+
+    <footer>
+      <section class="footer-section">
+        <img class="logo" src="logo.png" alt="JS Issue Tracker">
+        <h1>JS Issue Tracker © 2019</h1>
+      </section>
+
+      <section class="footer-section">
+        <h2 class="footer-section-title">Contacts</h2>
+        <span class="footer-section-item">Telephone: +359 876 345 479</span>
+        <span class="footer-section-item">Address: "Sofia, Student City"</span>
+      </section>
+
+      <section class="footer-section">
+        <h2 class="footer-section-title">About The Company</h2>
+        <span class="footer-section-item">We are here to make your life easier by providing an easy way to add and observe your TODO's.</span>
+      </section>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
